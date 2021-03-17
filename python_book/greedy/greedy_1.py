@@ -26,6 +26,11 @@ n,m,k=map(int,input().split())
 input()함수는 속도가 느려서 시간 초과로 오답 판정을 받을 수 있기 때문이다.
 따라서 파이썬의 sys 라이브러리에 저장되어 있는 sys.stdin.readline()함수를 이용한다.
 
+(5) 여러 줄의 데이터를 입력받기
+array=[]
+for i in range(n): n은 행의 수
+    array.append(list(map(int,input().split())))
+    
 import sys
 sys.stdin.readline().rstrip()
 
