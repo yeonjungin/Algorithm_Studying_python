@@ -1,7 +1,7 @@
 '''
 Chapter4. 구현
 실전 3번문제. 게임 개발
-많이 풀어봐야 하는 문제 *** 
+많이 풀어봐야 하는 문제 ***
 '''
 n, m = map(int, input().split())
 d = [[0] * m for _ in range(n)]
