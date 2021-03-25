@@ -1,21 +1,14 @@
 '''
-백준 1926번
-https://www.acmicpc.net/problem/1926
+결과값이 잘 나오는데, 백준 사이트에서는 틀렸다고 나옴..
 
-백준 2667번
-https://www.acmicpc.net/problem/2667
-
-백준 1012번
-https://www.acmicpc.net/problem/1012
 '''
-
 n, m = map(int, input().split())  # n : 행, m:열
 graph = []
 for i in range(n):
     graph.append(list(map(int, input().split())))
 
-area = 0
 max_area = 0
+area=0
 
 def dfs(x, y):
     global area
@@ -31,8 +24,7 @@ def dfs(x, y):
         dfs(x, y + 1)
         if max_area < area:
             max_area = area
-        area = 0
-
+        area=0
 
 count = 0
 for i in range(n):
