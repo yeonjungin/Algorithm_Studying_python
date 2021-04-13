@@ -8,15 +8,23 @@ x = int(input())
 d = [0] * 10  # DP 테이블 초기화
 
 for i in range(2, x + 1):
+<<<<<<< HEAD
     d[i] = d[i - 1] + 1  # 1을 빼는 경우,
     # +1을 하는 이유는, 연산 횟수를 나타내기 위해서,
+=======
+    d[i] = d[i - 1] + 1  # 1을 빼는 경우
+    print('i:', i, d[i])
+>>>>>>> 29ef519b147fbcc4c29823db8ee3a9ba7a6e6220
     if i % 2 == 0:
         d[i] = min(d[i], d[i // 2] + 1)
     if i % 3 == 0:
         d[i] = min(d[i], d[i // 3] + 1)
     if i % 5 == 0:
         d[i] = min(d[i], d[i // 5] + 1)
+<<<<<<< HEAD
     print('i:', i, d[i])
+=======
+>>>>>>> 29ef519b147fbcc4c29823db8ee3a9ba7a6e6220
 
 print(d[x])
 
