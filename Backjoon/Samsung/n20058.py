@@ -4,28 +4,20 @@
 import sys
 sys.setrecursionlimit(100000) -> 기본 재귀 제한 푸는 법
 '''
-<<<<<<< HEAD
-
-=======
->>>>>>> c6e3764d1de7725397c80f33741929f9b310eb65
 from collections import deque
 from copy import deepcopy
 
 _N, Q = map(int, input().split())
 N = pow(2, _N)
-<<<<<<< HEAD
 map_list = []
 map_list = [list(map(int, input().split())) for _ in range(N)]
 L_list = list(map(int, input().split()))
-=======
 
 ice_map = [list(map(int,input().split())) for _ in range(N)]
->>>>>>> c6e3764d1de7725397c80f33741929f9b310eb65
 
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
-<<<<<<< HEAD
 for l in L_list:
     L = pow(2, l)
     tmp = deepcopy(map_list)
@@ -61,7 +53,6 @@ for l in L_list:
 # 2.남아있는 얼음 중 가장 큰 덩어리가 차지하는 칸의 개수
 total = 0
 max_ice = 0
-=======
 L_list=[]
 L_list=list(map(int, input().split()))
 
@@ -104,7 +95,6 @@ for _L in L_list:
 # 2.남아있는 얼음 중 가장 큰 덩어리가 차지하는 칸의 개수
 total=0
 max_ice=0
->>>>>>> c6e3764d1de7725397c80f33741929f9b310eb65
 
 # BFS 알고리즘 (넓이 우선 탐색)
 # 단계별 탐색이 가능하기 때문에 최단 거리를 구할 수 있다.
@@ -113,7 +103,6 @@ max_ice=0
 
 for i in range(N):
     for j in range(N):
-<<<<<<< HEAD
         if map_list[i][j] == 0:
             continue
         queue = deque()
@@ -136,28 +125,3 @@ for i in range(N):
 
 print("{}\n{}".format(total, max_ice))
 
-# 코드 출처
-# https://github.com/tony9402/baekjoon/tree/main/solution/simulation
-=======
-        if ice_map[i][j]==0:
-            continue
-        cnt=0
-        que=deque()
-        que.append((i,j))
-        total+=ice_map[i][j]
-        ice_map[i][j]=0
-        while len(que)!=0:
-            cy,cx=que.popleft()
-            cnt+=1
-            for k in range(4):
-                y=cy+dy[k]
-                x=cx+dx[k]
-                if y < 0 or y >= N or x < 0 or x >= N or ice_map[y][x]==0:
-                    continue
-                que.append((y,x))
-                total+=ice_map[y][x]
-                ice_map[y][x]=0
-
-        max_ice=max(max_ice,cnt)
-print("{}\n{}".format(total,max_ice))
->>>>>>> c6e3764d1de7725397c80f33741929f9b310eb65
