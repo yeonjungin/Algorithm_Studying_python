@@ -2,8 +2,6 @@
 import sys
 
 t_num = int(sys.stdin.readline())
-
-
 # input보다는 sys.stdin.readline.rstrip() rstrip()은 줄바꿈 문자 제외
 
 def plus_turn(array, n):
