@@ -5,13 +5,21 @@ array = [0 for _ in range(n + 1)]
 array[0] = 1
 
 for i in range(1, n + 1):
-    for j in range(0, i, 1):
+    for j in range(i):
         array[i] += array[j] * array[i - j - 1]
 
 print(array[n])
 
 '''
-array[1],array[2],array[3] .. 순차적으로 값을 구해서 array에 집어넣어야함.
-이중 반복문 사용
+i=1
+array[1]=array[0]*array[0]
 
+i=2
+array[2]=array[0]*array[1]+array[1]*array[0]
+
+i=3
+array[3]=array[0]*array[2]+array[1]*array[1]+array[2]*array[0]
+
+
+array[i]=array[j]*array[i-j-1]
 '''
