@@ -1,8 +1,4 @@
 # https://www.codetree.ai/missions/2/problems/number-of-happy-sequence/description
-n,chk=map(int,input().split()) # 격자 크기 n, 연속해야 하는 숫자의 수 : n
-array=[list(map(int,input().split())) for _ in range(n)]
-result=0
-
 # 정답코드 참고한 소스
 n,m=map(int,input().split()) # 격자 크기 n, 연속해야 하는 숫자의 수 : n
 array=[list(map(int,input().split())) for _ in range(n)]
@@ -40,6 +36,10 @@ for j in range(n):
 
 print(result)
 
+
+# n,chk=map(int,input().split()) # 격자 크기 n, 연속해야 하는 숫자의 수 : n
+# array=[list(map(int,input().split())) for _ in range(n)]
+# result=0
 # for i in range(n):
 #     # 행별로 체크
 #     cnt_row=0
