@@ -1,4 +1,3 @@
-# 출처 : https://www.codetree.ai/missions/2/problems/gold-mining/discussions/997?discussionRowsPerPage=5&discussionPage=1
 # 채굴한 금의 가격 >= 채굴비용 & 채굴할 수 있는 가장 많은 금의 개수 구하기.
 # 격자 크기는 n X n
 # 채굴은 마름모 모양으로 딱 1번만 할 수 있다.
@@ -50,3 +49,17 @@ for i in range(n):
 
 print(result)
 
+'''
+n=3일때
+k는 최대 4
+
+n=4일때
+k는 최대 6
+k가 3일때 격자의 반을 채우니까, k가 6이 되면 격자의 모든 칸을 채우게 된다.
+
+n=5일때
+k는 최대 8
+
+2*n-2=2*(n-1)
+
+'''
